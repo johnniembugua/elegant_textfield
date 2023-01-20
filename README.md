@@ -43,7 +43,7 @@ class _MyAppCardState extends State<MyAppCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FlutterInputField(
+      body: ElegantInputField(
         hintText: 'Enter username',
         labelText: 'Username',
         filledColor: Colors.grey.shade200,
