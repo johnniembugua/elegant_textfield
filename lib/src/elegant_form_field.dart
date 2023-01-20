@@ -49,7 +49,7 @@ class ElegantInputField extends StatelessWidget {
           obscureText: isSecure,
           maxLines: lineHeight,
           decoration: InputDecoration(
-            contentPadding: const EdgeInsets.symmetric(
+            contentPadding: EdgeInsets.symmetric(
               horizontal: 10,
               vertical: 15,
             ),
