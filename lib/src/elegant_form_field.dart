@@ -70,7 +70,7 @@ class ElegantInputField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
               borderSide: const BorderSide(
-                width: 0,
+                width: 0.5,
                 style: BorderStyle.none,
               ),
             ),
