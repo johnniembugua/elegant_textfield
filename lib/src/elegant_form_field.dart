@@ -16,6 +16,7 @@ class ElegantInputField extends StatelessWidget {
   final int lineHeight;
   final double labelFontSize;
   final double hintFontSize;
+  final bool enabled;
 
   const ElegantInputField({
     Key? key,
@@ -25,14 +26,15 @@ class ElegantInputField extends StatelessWidget {
     required this.onDone,
     this.prefixWidget,
     this.suffixWidget,
-    this.borderColor = Colors.blue,
+    this.borderColor = Colors.grey,
     this.textFieldController,
     this.suffixTap,
     this.validateTextField,
-    this.filledColor = Colors.lightBlue,
+    this.filledColor = Colors.white,
     this.isSecure = false,
     this.lineHeight = 1,
     this.labelFontSize = 16,
+    this.enabled = true,
     this.hintFontSize = 16,
   }) : super(key: key);
 
@@ -57,6 +59,7 @@ class ElegantInputField extends StatelessWidget {
               fontSize: 16,
             ),
             filled: true,
+            enabled: enabled,
             fillColor: filledColor,
             hintText: hintText,
             prefixIcon: prefixWidget,
@@ -68,20 +71,20 @@ class ElegantInputField extends StatelessWidget {
               fontSize: hintFontSize,
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              borderSide: const BorderSide(
-                width: 0.5,
-                style: BorderStyle.none,
-              ),
-            ),
+                borderRadius: BorderRadius.circular(.7),
+                borderSide: BorderSide(color: borderColor, width: .7)),
+            errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(width: 0.7)),
+            disabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: borderColor, width: 0.7)),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: borderColor, width: 0.7)),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              borderSide: BorderSide(
-                width: 0.5,
-                style: BorderStyle.solid,
-                color: borderColor,
-              ),
-            ),
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: borderColor, width: 0.9)),
           ),
           onChanged: (String str) {
             onChange(str);
