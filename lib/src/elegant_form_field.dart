@@ -51,7 +51,7 @@ class ElegantInputField extends StatelessWidget {
           obscureText: isSecure,
           maxLines: lineHeight,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: 10,
               vertical: 15,
             ),
@@ -75,7 +75,7 @@ class ElegantInputField extends StatelessWidget {
                 borderSide: BorderSide(color: borderColor, width: .7)),
             errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(width: 0.7)),
+                borderSide: const BorderSide(width: 0.7)),
             disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: borderColor, width: 0.7)),
